@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="runner.RunnerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-03-28T10:34:17" hostname="WIN-2HOT7N0FG3K" time="9.622">
+  <properties/>
+  <testcase name="Успешная авторизация на основе токена" classname="runner.RunnerTest" time="5.87"/>
+  <testcase name="Неуспешная авторизация на основе токена" classname="runner.RunnerTest" time="0.403"/>
+  <testcase name="Операции со списком контрактов для электронной рассылки" classname="runner.RunnerTest" time="3.338"/>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	https://apig.unisender.com/auth/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "password": "Password!1",
+    "login": "ryzhyk.aliaksandra@yandex.by"
+}
+HTTP/1.1 200 OK
+server: nginx
+date: Mon, 28 Mar 2022 10:34:20 GMT
+content-type: application/json
+content-length: 78
+cache-control: no-cache, private
+x-robots-tag: noindex,nofollow
+x-powered-by: Unisender
+
+{
+    "success": true,
+    "result": {
+        "token": "4448e5886da12927e8ef77b5592f4345edef3389"
+    }
+}
+Request method:	POST
+Request URI:	https://apig.unisender.com/auth/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "password": "Password!11",
+    "login": "ryzhyk.aliaksandra@yandex.by"
+}
+Request method:	POST
+Request URI:	https://apig.unisender.com/auth/token
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "password": "Password!11",
+    "login": "ryzhyk.aliaksandra@yandex.by"
+}
+HTTP/1.1 400 Bad Request
+server: nginx
+date: Mon, 28 Mar 2022 10:34:22 GMT
+content-type: application/json
+content-length: 229
+cache-control: no-cache, private
+set-cookie: 15c34465-7534-44c6-b5e9-eb8bdc0ca37b=4; expires=Mon, 28-Mar-2022 11:04:22 GMT; Max-Age=1800; path=/; samesite=lax
+set-cookie: ab4f517c-ec0a-428f-b781-3ab3d30415c2=4; expires=Mon, 28-Mar-2022 11:04:22 GMT; Max-Age=1800; path=/; samesite=lax
+x-robots-tag: noindex,nofollow
+x-powered-by: Unisender
+
+{
+    "success": false,
+    "code": 400,
+    "message": "Bad request",
+    "error": {
+        "password": [
+            {
+                "code": "34ad57bc-d7dc-464f-9406-2188ad87f8c4",
+                "message": "Invalid credentials, password is not matches.",
+                "data": {
+                    "login": "ryzhyk.aliaksandra@yandex.by"
+                }
+            }
+        ]
+    }
+}
+Request method:	POST
+Request URI:	https://api.unisender.com/ru/api/createList?api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json&title=OtWnsTwJPb
+Proxy:			<none>
+Request params:	<none>
+Query params:	api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+				title=OtWnsTwJPb
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	POST
+Request URI:	https://api.unisender.com/ru/api/createList?api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json&title=OtWnsTwJPb
+Proxy:			<none>
+Request params:	<none>
+Query params:	api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+				title=OtWnsTwJPb
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	POST
+Request URI:	https://api.unisender.com/ru/api/createList?api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json&title=OtWnsTwJPb
+Proxy:			<none>
+Request params:	<none>
+Query params:	api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+				title=OtWnsTwJPb
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+server: nginx
+date: Mon, 28 Mar 2022 10:34:24 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+set-cookie: US_SESSID=9c893803b853f77b6b7221e031e57704; path=/; secure; HttpOnly; SameSite=lax
+expires: Mon, 28 Mar 2022 10:34:24 GMT
+last-modified: Mon, 28 Mar 2022 10:34:24 GMT
+pragma: no-cache
+x-username: ryzhyk.aliaksandra@yandex.by
+x-userid: 4614223
+x-session-id: 9c893803b853f77b6b7221e031e57704
+cache-control: max-age=0, must-revalidate, private
+content-encoding: gzip
+x-robots-tag: noindex,nofollow
+x-powered-by: Unisender
+
+{
+    "result": {
+        "id": 218
+    }
+}
+Request method:	POST
+Request URI:	https://api.unisender.com/ru/api/updateList?list_id=197&api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json&title=poSknXJEiP
+Proxy:			<none>
+Request params:	<none>
+Query params:	list_id=197
+				api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+				title=poSknXJEiP
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	POST
+Request URI:	https://api.unisender.com/ru/api/updateList?list_id=197&api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json&title=poSknXJEiP
+Proxy:			<none>
+Request params:	<none>
+Query params:	list_id=197
+				api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+				title=poSknXJEiP
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	POST
+Request URI:	https://api.unisender.com/ru/api/updateList?list_id=197&api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json&title=poSknXJEiP
+Proxy:			<none>
+Request params:	<none>
+Query params:	list_id=197
+				api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+				title=poSknXJEiP
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	POST
+Request URI:	https://api.unisender.com/ru/api/updateList?list_id=197&api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json&title=poSknXJEiP
+Proxy:			<none>
+Request params:	<none>
+Query params:	list_id=197
+				api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+				title=poSknXJEiP
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+server: nginx
+date: Mon, 28 Mar 2022 10:34:24 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+set-cookie: US_SESSID=b64a0399c41ec96ecdfcca373d248ea9; path=/; secure; HttpOnly; SameSite=lax
+expires: Mon, 28 Mar 2022 10:34:24 GMT
+last-modified: Mon, 28 Mar 2022 10:34:24 GMT
+pragma: no-cache
+x-username: ryzhyk.aliaksandra@yandex.by
+x-userid: 4614223
+x-session-id: b64a0399c41ec96ecdfcca373d248ea9
+cache-control: max-age=0, must-revalidate, private
+content-encoding: gzip
+x-robots-tag: noindex,nofollow
+x-powered-by: Unisender
+
+{
+    "result": {
+        
+    }
+}
+Request method:	POST
+Request URI:	https://api.unisender.com/ru/api/deleteList?list_id=197&api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json
+Proxy:			<none>
+Request params:	<none>
+Query params:	list_id=197
+				api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	POST
+Request URI:	https://api.unisender.com/ru/api/deleteList?list_id=197&api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json
+Proxy:			<none>
+Request params:	<none>
+Query params:	list_id=197
+				api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	POST
+Request URI:	https://api.unisender.com/ru/api/deleteList?list_id=197&api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json
+Proxy:			<none>
+Request params:	<none>
+Query params:	list_id=197
+				api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	POST
+Request URI:	https://api.unisender.com/ru/api/deleteList?list_id=197&api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json
+Proxy:			<none>
+Request params:	<none>
+Query params:	list_id=197
+				api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	POST
+Request URI:	https://api.unisender.com/ru/api/deleteList?list_id=197&api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json
+Proxy:			<none>
+Request params:	<none>
+Query params:	list_id=197
+				api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+server: nginx
+date: Mon, 28 Mar 2022 10:34:24 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+set-cookie: US_SESSID=5d354d52143cefd23b2f79293b416a50; path=/; secure; HttpOnly; SameSite=lax
+expires: Mon, 28 Mar 2022 10:34:24 GMT
+last-modified: Mon, 28 Mar 2022 10:34:24 GMT
+pragma: no-cache
+x-username: ryzhyk.aliaksandra@yandex.by
+x-userid: 4614223
+x-session-id: 5d354d52143cefd23b2f79293b416a50
+cache-control: max-age=0, must-revalidate, private
+content-encoding: gzip
+x-robots-tag: noindex,nofollow
+x-powered-by: Unisender
+
+{
+    "result": {
+        
+    }
+}
+Request method:	GET
+Request URI:	https://api.unisender.com/ru/api/getLists?api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json
+Proxy:			<none>
+Request params:	<none>
+Query params:	api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	GET
+Request URI:	https://api.unisender.com/ru/api/getLists?api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json
+Proxy:			<none>
+Request params:	<none>
+Query params:	api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	GET
+Request URI:	https://api.unisender.com/ru/api/getLists?api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json
+Proxy:			<none>
+Request params:	<none>
+Query params:	api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	GET
+Request URI:	https://api.unisender.com/ru/api/getLists?api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json
+Proxy:			<none>
+Request params:	<none>
+Query params:	api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	GET
+Request URI:	https://api.unisender.com/ru/api/getLists?api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json
+Proxy:			<none>
+Request params:	<none>
+Query params:	api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	GET
+Request URI:	https://api.unisender.com/ru/api/getLists?api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade&format=json
+Proxy:			<none>
+Request params:	<none>
+Query params:	api_key=6arqjmbzhyo8q9p9szoeqbbjnufzsb5pzjxktade
+				format=json
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+server: nginx
+date: Mon, 28 Mar 2022 10:34:24 GMT
+content-type: application/json; charset=utf-8
+transfer-encoding: chunked
+set-cookie: US_SESSID=e1232a160660ec0bf057e5a68e2f2e2f; path=/; secure; HttpOnly; SameSite=lax
+expires: Mon, 28 Mar 2022 10:34:24 GMT
+last-modified: Mon, 28 Mar 2022 10:34:24 GMT
+pragma: no-cache
+x-username: ryzhyk.aliaksandra@yandex.by
+x-userid: 4614223
+x-session-id: e1232a160660ec0bf057e5a68e2f2e2f
+cache-control: max-age=0, must-revalidate, private
+content-encoding: gzip
+x-robots-tag: noindex,nofollow
+x-powered-by: Unisender
+
+{
+    "result": [
+        {
+            "id": 190,
+            "title": "KemzUEVdLA"
+        },
+        {
+            "id": 191,
+            "title": "JzVOhLQhAD"
+        },
+        {
+            "id": 192,
+            "title": "ytmmCMQQvJ"
+        },
+        {
+            "id": 193,
+            "title": "QoSisbcDVg"
+        },
+        {
+            "id": 194,
+            "title": "CYxiOULXUP"
+        },
+        {
+            "id": 198,
+            "title": "xJtgRrSOLp"
+        },
+        {
+            "id": 199,
+            "title": "LzDzyzltPG"
+        },
+        {
+            "id": 200,
+            "title": "YlppNmLTDk"
+        },
+        {
+            "id": 201,
+            "title": "cbvrdeBqxJ"
+        },
+        {
+            "id": 202,
+            "title": "RitWnCyEfG"
+        },
+        {
+            "id": 203,
+            "title": "vBfnUsjIfU"
+        },
+        {
+            "id": 204,
+            "title": "CmTgGpsXsM"
+        },
+        {
+            "id": 205,
+            "title": "BZycdksBTt"
+        },
+        {
+            "id": 206,
+            "title": "xaSqihPTcu"
+        },
+        {
+            "id": 208,
+            "title": "LTqNYaYGbL"
+        },
+        {
+            "id": 209,
+            "title": "SOhiZXDxkB"
+        },
+        {
+            "id": 210,
+            "title": "nuGDRfhIMn"
+        },
+        {
+            "id": 211,
+            "title": "JHeYlJfTRK"
+        },
+        {
+            "id": 212,
+            "title": "lwNWIktuEz"
+        },
+        {
+            "id": 213,
+            "title": "KITnOgTraR"
+        },
+        {
+            "id": 214,
+            "title": "wyWpuhoOdX"
+        },
+        {
+            "id": 215,
+            "title": "VRrvMLyslx"
+        },
+        {
+            "id": 216,
+            "title": "mrKNySogKB"
+        },
+        {
+            "id": 217,
+            "title": "wNjILyGFpQ"
+        },
+        {
+            "id": 218,
+            "title": "OtWnsTwJPb"
+        }
+    ]
+}
+]]></system-out>
+  <system-err><![CDATA[?[32m?[1m??????????????????????????????????????????????????????????????????????????????????????[0m
+?[32m?[1m??[0m Share your Cucumber Report with your team at ?[36m?[1m?[4mhttps://reports.cucumber.io?[0m          ?[32m?[1m??[0m
+?[32m?[1m??[0m Activate publishing with one of the following:                                    ?[32m?[1m??[0m
+?[32m?[1m??[0m                                                                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m src/test/resources/cucumber.properties:          ?[36mcucumber.publish.enabled?[0m=?[36mtrue?[0m    ?[32m?[1m??[0m
+?[32m?[1m??[0m src/test/resources/junit-platform.properties:    ?[36mcucumber.publish.enabled?[0m=?[36mtrue?[0m    ?[32m?[1m??[0m
+?[32m?[1m??[0m Environment variable:                            ?[36mCUCUMBER_PUBLISH_ENABLED?[0m=?[36mtrue?[0m    ?[32m?[1m??[0m
+?[32m?[1m??[0m JUnit:                                           ?[36m@CucumberOptions?[0m(publish = ?[36mtrue?[0m) ?[32m?[1m??[0m
+?[32m?[1m??[0m                                                                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m More information at ?[36mhttps://cucumber.io/docs/cucumber/environment-variables/?[0m      ?[32m?[1m??[0m
+?[32m?[1m??[0m                                                                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m Disable this message with one of the following:                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m                                                                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m src/test/resources/cucumber.properties:          ?[36mcucumber.publish.quiet?[0m=?[36mtrue?[0m      ?[32m?[1m??[0m
+?[32m?[1m??[0m src/test/resources/junit-platform.properties:    ?[36mcucumber.publish.quiet?[0m=?[36mtrue?[0m      ?[32m?[1m??[0m
+?[32m?[1m??????????????????????????????????????????????????????????????????????????????????????[0m
+]]></system-err>
+</testsuite>

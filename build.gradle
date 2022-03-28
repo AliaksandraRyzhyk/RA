@@ -1,0 +1,63 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'maven-publish'
+    id 'io.qameta.allure' version '2.9.6'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2/')
+    }
+}
+
+project.ext {
+    restAssuredVersion = '4.4.0'
+    jUnitVersion = '5.8.2'
+    reportPortalVersion = '5.1.0'
+    cucumberJunitVersion = '7.2.3'
+    cucumberJavaVersion = '7.2.3'
+
+}
+
+dependencies {
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.5.1'
+    testImplementation group: 'io.rest-assured', name: 'json-path', version: '4.5.1'
+    testImplementation group: 'io.rest-assured', name: 'json-schema-validator', version: '4.5.1'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.8.2'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.8.2'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.8.2'
+    testImplementation group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.8.2'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.2.3'
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.2.3'
+    testImplementation group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.22.0'
+    implementation group: 'com.epam.reportportal', name: 'agent-java-junit5', version: '5.1.1'
+    testImplementation group: 'io.qameta.allure', name: 'allure-junit5', version: '2.17.3'
+    implementation group: 'io.qameta.allure', name: 'allure-maven', version: '2.11.2'
+    implementation group: 'io.qameta.allure', name: 'allure-rest-assured', version: '2.17.3'
+    implementation group: 'io.qameta.allure', name: 'allure-assertj', version: '2.17.3'
+    testImplementation group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.9'
+
+
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+task generateAllureReport(type: Exec) {
+   commandLine "allure", "generate build/allure-results"
+}
+
+test {
+    testLogging.showStandardStreams = true
+    useJUnitPlatform()
+    systemProperty 'junit.jupiter.extensions.autodetection.enabled', true
+    systemProperty 'allure.results.directory','build/allure-results'
+}
